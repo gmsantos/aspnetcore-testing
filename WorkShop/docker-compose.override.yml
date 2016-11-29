@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  workshop:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+            
+  database:
+    image: microsoft/mssql-server-linux
+    environment: 
+     - ACCEPT_EULA=Y
+     - SA_PASSWORD=!mudar123
+    ports:
+      - "1433:1433"
